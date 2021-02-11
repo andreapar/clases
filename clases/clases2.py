@@ -1,7 +1,7 @@
 #En esta clase aprenderemos sobre las variables booleana
-PruebaV = True
+pruebaV = True
 pruebaF = False
-print( pruebaV )
+print(pruebaV)
 print( pruebaF )
 pruebaV = pruebaF
 print( pruebaV )
