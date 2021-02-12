@@ -26,7 +26,7 @@ print("-"*16, "Peso diferente", "-"*16)
 isPesoDiferente = peso != 55
 print(isPesoDiferente)
 
-#Para preguntar si hay un string en un texto se copia "in"
+#Para preguntar si hay un string en un texto anterior se copia "in"
 print("-"*16, "Esta apellido en el nombre", "-"*16)
 apellido = "Parra"
 isApellido = apellido in nombre
