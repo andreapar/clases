@@ -18,7 +18,7 @@ print(f"la multiplicar dio {multiplicar} exitosamente")
 dividir = numeroA / numeroB
 print(f"la divicion dio {dividir} exitosamente")
 
-#Para un exponente se coloca los asteriscos las veces que seas neceseario
+#Para un exponente se coloca los asteriscos las veces que seas neceseario para elevarlo
 exponente = numeroA**numeroB
 print(f"la exponente dio {exponente} exitosamente")
 
