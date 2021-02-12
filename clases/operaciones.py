@@ -24,7 +24,8 @@ print(f"la exponente dio {exponente} exitosamente")
 
 #Para la raíz cuadrada se coloca 0.5
 raiz =numeroA **0.5
-print(f"la raíz dio {raiz}")
+print(f"la raíz dio {raiz} exitosamente")
+
 
 
 
