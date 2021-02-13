@@ -1,10 +1,18 @@
-print("==================================================")
-print("Bievenidos a tu sistema de operaciones aritméticas")
-print("==================================================\n")
+from os import system, name
+# Limpiar consola en Python:https://www.geeksforgeeks.org/clear-screen-python/
 
 opcion = 0
 
 while(opcion != 6):
+    if (name == "nt"):
+        _ = system("cls")
+    else:
+        _ = system("clear")
+
+    print("==================================================")
+    print("Bievenidos a tu sistema de operaciones aritméticas")
+    print("==================================================\n")
+
     print("1. Suma")
     print("2. Resta")
     print("3. Multiplicación")
@@ -12,6 +20,11 @@ while(opcion != 6):
     print("5. Mayor, menor o igual")
     print("6. Salir\n")
     opcion = int(input("Ingrese opción: "))
+
+    if (name == "nt"):
+        _ = system("cls")
+    else:
+        _ = system("clear")
 
     if (opcion == 1):
         print("===============")
@@ -55,7 +68,7 @@ while(opcion != 6):
         else:
             resultado = a/b
             print("El resultado es: ",resultado)
-            input()
+        input()
 
     elif (opcion == 5):
         print("================================")
