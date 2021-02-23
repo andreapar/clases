@@ -18,9 +18,9 @@ print(TITULO_HOLAA)
 print("==========================================================================")
 trigleceridos = int(input(PREGUNTA_TRIGLECERIDOS))
 isOptimo = trigleceridos < 150
-isSobreOptimo = trigleceridos >= 150 and trigleceridos < 199
-isAlto = trigleceridos >= 200 and trigleceridos < 499
-isMuyAlto = trigleceridos >= 500
+isSobreOptimo = trigleceridos >= 150 and trigleceridos <= 199
+isAlto = trigleceridos >= 200 and trigleceridos <= 499
+isMuyAlto = trigleceridos > 500
 
 if (isOptimo):
     print(MENSAJE_OPTIMO)
@@ -32,10 +32,10 @@ else:
     print(MENSAJE_MUY_ALTO)
 
 homocisteina = int(input(PREGUNTA_HOMOCISTEINA))
-isOptimo = homocisteina >= 2 and homocisteina < 14
-isSobreOptimo = homocisteina >= 15 and homocisteina < 29
-isAlto = homocisteina >= 30 and homocisteina < 99
-isMuyAlto = homocisteina >=100
+isOptimo = homocisteina >= 2 and homocisteina <= 15
+isSobreOptimo = homocisteina > 15 and homocisteina <= 30
+isAlto = homocisteina > 30 and homocisteina <= 100
+isMuyAlto = homocisteina >= 100
 
 if (isOptimo):
     print(MENSAJE_OPTIMO_HOMOCISTEINA)
