@@ -11,7 +11,8 @@ PREGUNTAR_NUMERO = '''
         lo puedes intentar antes de que se te
         acaben las vidas.
         ¡Suerte!
-        Ingresa tú número: '''
+        Ingresa tú número: 
+'''
 PREGUNTA_DIFICULTAD = '''
     1. Fácil
     2. Moderado
@@ -19,7 +20,7 @@ PREGUNTA_DIFICULTAD = '''
 '''
 PREGUNTA_FALLIDA = "Fallaste :C , ingresa otro número: "
 MENSAJE_GANAR = "¡Felicidades, ganaste!"
-MENSAJE_PERDISTE = "Perdiste, vueve a intertanrlo"
+MENSAJE_PERDISTE = "Perdiste, vueve a intentarlo"
 DESPEDIDA = "Adióss"
 
 #Datos
@@ -70,7 +71,8 @@ if (vidas >= 0 and numeroIngresado == numeroOcultoDos):
     print(MENSAJE_GANAR)
 
 else:
-    print(MENSAJE_PERDISTE, "El número uno era el ",
+    print(MENSAJE_PERDISTE, "- El número uno era el ",
                             numeroOculto,
-                            "El número dos era el",
+                            "- El número dos era el",
                             numeroOcultoDos)
+print(DESPEDIDA)
