@@ -45,7 +45,7 @@ if (opcion == 1):
     for iteracion in range (1,rango + 1):
         if (iteracion % 2 != 0):
             print(iteracion)
-if (opcion == 2):
+elif (opcion == 2):
     for iteracion in range (1,rango + 1):
         if (iteracion % 2 == 0):
             print(iteracion)
