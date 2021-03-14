@@ -1,3 +1,5 @@
+from os import system,name
+
 MensajeBienvenida = "Hola, hoy te ayudaremos cons tus negocios"
 PreguntarOpcion = ''' Menú de opciones
     1. Conventir en dólares
@@ -70,11 +72,16 @@ while(opcion != 4):
         print(MensajeMaximo, max (listaDolares))
         print(MensajeMinimo, min (listaDolares))
         print(MensajePromedio,sum (listaDolares)/len(listaDolares))
-        print("===================================")
     else:
         print(MensajeNoValido)
+    
+    input("\nPresione una tecla para continuar.")
+    
+    if (name == "nt"):
+        _ = system("cls")
+    else:
+        _ = system("clear")
+
     opcion = int(input(PreguntarOpcion))
+
 print("Gracias, hasta pronto")
-
-
-        
