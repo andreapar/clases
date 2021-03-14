@@ -17,6 +17,10 @@ MensajePesos = "Mostrar lista en pesos"
 MensajeDolares = "Mostrar lista original"
 MensajeEruros = "Mostar lista en euros"
 MensajeNoValido = "Entrada no válida"
+MensajeIngresoBajo = "Ingresos bajos"
+MensajeIngresoMedio = "Ingresos medios"
+MensajeIngresoAlto = "Ingresos altos"
+MensajeIngresoElevado = "Ingresos elevados"
 MensajeMaximo = "Su ingreso más alto es"
 MensajeMinimo = "Su ingreso más bajo es"
 MensajePromedio = "Su promedio de los ingresos es"
@@ -36,27 +40,41 @@ for elemento in listaDolares:
 print(MensajeBienvenida)
 opcion = int(input(PreguntarOpcion))
 while(opcion != 4):
-    print("")
+    #-----Opción 1 -----#
     if (opcion == 1):
         conversion = input(PreguntarConversion)
-        if (conversion == "C"):
+        if (conversion.upper() == "C"):
             print(MensajePesos)
             print(listaPesos)
-        elif (conversion == "D"):
+        elif (conversion.upper() == "D"):
             print(MensajeDolares)
             print(listaDolares)
-        elif (conversion == "E"):
+        elif (conversion.upper() == "E"):
             print(MensajeEruros)
             print(listaEuros)
         else:
             print(MensajeNoValido)
-        print "=" * 30
-    elif (opcion == 2)
-    
+    #----- Opción 2 -----#
+    elif (opcion == 2):
+        for elemento in listaDolares:
+            if (elemento < 1000):
+                print(elemento, MensajeIngresoBajo)
+            elif (elemento >= 100 and elemento < 7000):
+                print(elemento,MensajeIngresoMedio)
+            elif (elemento >= 700 and elemento < 2000):
+                print(elemento, MensajeIngresoAlto)
+            else:
+                print(elemento, MensajeIngresoElevado)
+    #---- Opción 3 -----#
+    elif (opcion == 3):
+        print(MensajeMaximo, max (listaDolares))
+        print(MensajeMinimo, min (listaDolares))
+        print(MensajePromedio,sum (listaDolares)/len(listaDolares))
+        print("===================================")
+    else:
+        print(MensajeNoValido)
+    opcion = int(input(PreguntarOpcion))
+print("Gracias, hasta pronto")
 
 
-
-
-
-
-
+        
