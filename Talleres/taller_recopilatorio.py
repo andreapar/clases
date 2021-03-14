@@ -1,8 +1,8 @@
 from os import system,name
 
-MensajeBienvenida = "Hola, hoy te ayudaremos cons tus negocios"
+MensajeBienvenida = "Hola, hoy te ayudaremos con tus negocios"
 PreguntarOpcion = ''' Menú de opciones
-    1. Conventir en dólares
+    1. Convertir en dólares
     2. Clasificación de sus ingresos
     3. Conocer el máximo, mínimo y el promedio de sus ingresos
     4.Salir
@@ -30,13 +30,13 @@ MensajePromedio = "Su promedio de los ingresos es"
 listaDolares = [20000,30000,4000,2500,1000,7600]
 listaPesos = []
 for elemento in listaDolares:
-    pesos = round (elemento * 3700,2)
-    listaPesos.append (pesos)
+    pesos = round(elemento * 3700,2)
+    listaPesos.append(pesos)
 
 listaEuros = []
 for elemento in listaDolares:
-    pesos = round (elemento * 0.84,2)
-    listaEuros.append (pesos)
+    euros = round(elemento * 0.84,2)
+    listaEuros.append(euros)
 
 #----- Código -----#
 print(MensajeBienvenida)
@@ -60,18 +60,18 @@ while(opcion != 4):
     elif (opcion == 2):
         for elemento in listaDolares:
             if (elemento < 1000):
-                print(elemento, MensajeIngresoBajo)
-            elif (elemento >= 100 and elemento < 7000):
-                print(elemento,MensajeIngresoMedio)
-            elif (elemento >= 700 and elemento < 2000):
-                print(elemento, MensajeIngresoAlto)
+                print("- ", elemento, "corresponde a", MensajeIngresoBajo)
+            elif (elemento >= 1000 and elemento < 7000):
+                print("- ",elemento, "corresponde a", MensajeIngresoMedio)
+            elif (elemento >= 7000 and elemento < 20000):
+                print("- ", elemento, "corresponde a",  MensajeIngresoAlto)
             else:
-                print(elemento, MensajeIngresoElevado)
+                print("- ", elemento, "corresponde a", MensajeIngresoElevado)
     #---- Opción 3 -----#
     elif (opcion == 3):
-        print(MensajeMaximo, max (listaDolares))
-        print(MensajeMinimo, min (listaDolares))
-        print(MensajePromedio,sum (listaDolares)/len(listaDolares))
+        print(MensajeMaximo, max(listaDolares))
+        print(MensajeMinimo, min(listaDolares))
+        print(MensajePromedio,sum(listaDolares)/len(listaDolares))
     else:
         print(MensajeNoValido)
     
