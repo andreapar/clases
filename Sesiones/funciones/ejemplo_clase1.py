@@ -58,12 +58,10 @@ def potenciar (base = 0,exponente = 1):
 def calcular (operacion, numeroA, numeroB):
     print(operacion(numeroA,numeroB))
 
-baseIngresada = int(input("Ingrese una base entera: "))
-exponenteIngresado = int(input("Ingrese un exponente entero: "))
 
 print(restar(83,84))
 print(multiplicar(83,84))
 print(dividir(83,84))
 print(potenciar(5,6))
-print(potenciar(baseIngresada,exponenteIngresado))
+
 calcular(sumar, 63,57)
