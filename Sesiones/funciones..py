@@ -54,7 +54,11 @@ def potenciar (base = 0,exponente = 1):
     potencia = base ** exponente
     return potencia
 
+baseIngresada = int(input("Ingrese una base entera: "))
+exponenteIngresado = int(input("Ingrese un exponente entero: "))
+
 print(restar(83,84))
 print(multiplicar(83,84))
 print(dividir(83,84))
 print(potenciar(5,6))
+print(potenciar(baseIngresada,exponenteIngresado))
