@@ -7,7 +7,7 @@ def mostrarLista (lista):
 def mostrarEstadistica (lista):
     mayor = max lista
     menor = min lista
-    promedio = round(sum(lista)/len(lista))
+    promedio = round(sum(lista)/len(lista),2)
 
 #----- Punto 3 -----#
 def saludar (cantidad = 0):
