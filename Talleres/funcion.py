@@ -12,10 +12,6 @@ def mostrarEstadistica (lista):
     print("El número menor es:", menor)
     print("El promedio es:", promedio)
 
-#----- Punto 5 -----#
-def saludar (cantidad = 0):
-    print( "Hola, " * cantidad)
-
 #----- Punto 3 -----#
 def listaPares (lista):
     pares = []
@@ -31,6 +27,10 @@ def listaMayor (lista):
         if elemento > 24:
             numerosMayor.append(elemento)
     return numerosMayor
+
+#----- Punto 5 -----#
+def saludar (cantidad = 0):
+    print( "Hola, " * cantidad)
 
 #----- Punto 6 -----#
 def calcularImc (peso, estatura):
