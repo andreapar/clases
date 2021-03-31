@@ -1,65 +1,50 @@
 import funcion as fn
-#----- Punto 1 -----#
-def mostrarLista (lista):
-    for elemento in lista:
-        print(elemento)
+preguntaOpcion = '''Ingrese alguna de estas opciones
+    1. Mostrar lista de ciudades y materias
+    2. Mostrar lista de números y los topes
+    3. Mostrar los números mayores a 24 de la lista anterior
+    4. Mostrar los números pares de la lista anterior
+    5. Mostrar saludos
+    6. Calcular el IMC
+    7. Salir
+'''
+listaNumeros = [23,16,76,78,56,6,13,45,68,98,11,27,82,22,36,37]
 
-ciudades = ["Medellín", "Lisboa", "Ámsterdam", "Berlín","Cartagena", "Manizales"]
-materias = ["Geografía", "Historia", "Arte", "Música", "Química"]
-mostrarLista(ciudades)
-print("================================")
-mostrarLista(materias)
+#----- Código -----#
+opcion = int(input(preguntaOpcion))
+while (preguntaOpcion != 7):
+    #----- Punto 1 -----#
+    if (preguntaOpcion == 1):
+        ciudades = ["Medellín", "Lisboa", "Ámsterdam", "Berlín","Cartagena", "Manizales"]
+        materias = ["Geografía", "Historia", "Arte", "Música", "Química"]
+        fn.mostrarLista(ciudades)
+        fn.mostrarLista(materias)
 
-#----- Punto 2 -----#
-listaNumeros = [133,453,768,982,111,279,828]
-mayor = max(listaNumeros)
-menor = min(listaNumeros)
-promedio = round(sum(listaNumeros)/len(listaNumeros))
+    #----- Punto 2 -----#
+    elif (preguntaOpcion == 2):
+        fn.mostrarEstadistica(listaNumeros)
 
-print("=================================")
-print("El número más grande es:", mayor)
-print("El número menor es:", menor)
-print("El promedio es:", promedio)
-print("=================================")
+    #----- Punto 3 -----#
+    elif (preguntaOpcion == 3):
+        fn.listaPares(listaNumeros)
 
-#----- Punto 3 -----#
-opcion = int(input("Por favor ingrese la cantidad de saludos: "))
-print = saludar
-print("=================================")
+    #----- Punto 4 -----#
+    elif(preguntaOpcion == 4):
+        fn.listaMayor(listaNumeros)
+        print("=================================")
 
-#----- Punto 4 -----#
-def listaPares (lista):
-    pares = []
-    for elemento in lista:
-        if (elemento % 2 == 0):
-            pares.append(elemento)
-    return pares
+    #----- Punto 5 -----#
+    elif (preguntaOpcion == 5):
+        fn.saludar
 
-ListaA = [6, 19, 54, 44, 23,78,80,103,32,3]
-numerosPares = listaPares(ListaA)
-print(numerosPares)
-print("=================================")
+    #----- Punto 6 -----#
+    elif (preguntaOpcion == 6):
+        peso = float(input("Por favor ingresa tu peso en Kg: "))
+        estatura = float(input("Por favor ingresa tu estatura en m:"))
+        fn.calcularImc
+        print("=================================")
 
-#----- Punto 5 -----#
-def listaMayor (lista):
-    numerosMayor = []
-    for elemento in lista:
-        if elemento > 24:
-            numerosMayor.append(elemento)
-    return numerosMayor
-
-ListaC = [56,23,44,77,24,98,97,2,11,75]
-numeroALto = listaMayor(ListaC)
-print(numeroALto)
-print("=================================")
-
-#----- Punto 6 -----#
-peso = float(input("Por favor ingresa tu peso en Kg: "))
-estatura = float(input("Por favor ingresa tu estatura en m:"))
-print(calcularImc(peso,estatura))
-print("=================================")
-
-#----- Punto 7 -----#
-def despedida ():
-    print("Feliz día, hasta pronto")
-despedida()
+    #----- Punto 7 -----#
+    else:
+        fn.despedida(Adios)
+    opcion = int(input(preguntaOpcion))

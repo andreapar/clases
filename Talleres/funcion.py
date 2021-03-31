@@ -5,15 +5,18 @@ def mostrarLista (lista):
 
 #----- Punto 2 -----#
 def mostrarEstadistica (lista):
-    mayor = max lista
-    menor = min lista
+    mayor = round(max(lista),2)
+    menor = round(min(lista),2)
     promedio = round(sum(lista)/len(lista),2)
+    print("El número más grande es:", mayor)
+    print("El número menor es:", menor)
+    print("El promedio es:", promedio)
 
-#----- Punto 3 -----#
+#----- Punto 5 -----#
 def saludar (cantidad = 0):
     print( "Hola, " * cantidad)
 
-#----- Punto 4 -----#
+#----- Punto 3 -----#
 def listaPares (lista):
     pares = []
     for elemento in lista:
@@ -21,7 +24,7 @@ def listaPares (lista):
             pares.append(elemento)
     return pares
 
-#----- Punto 5 -----#
+#----- Punto 4 -----#
 def listaMayor (lista):
     numerosMayor = []
     for elemento in lista:
@@ -32,8 +35,10 @@ def listaMayor (lista):
 #----- Punto 6 -----#
 def calcularImc (peso, estatura):
     return peso/(estatura ** 2)
+    print(calcularImc(peso,estatura))
 
 #----- Punto 7 -----#
 def despedida ():
+    Adios = ()
     print("Feliz día, hasta pronto")
 
