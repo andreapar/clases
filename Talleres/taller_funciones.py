@@ -1,3 +1,4 @@
+import funcion as fn
 #----- Punto 1 -----#
 def mostrarLista (lista):
     for elemento in lista:
@@ -22,9 +23,8 @@ print("El promedio es:", promedio)
 print("=================================")
 
 #----- Punto 3 -----#
-def saludar (cantidad = 0):
-    print( "Hola, " * cantidad)
-saludar(11)
+opcion = int(input("Por favor ingrese la cantidad de saludos: "))
+print = saludar
 print("=================================")
 
 #----- Punto 4 -----#
@@ -54,10 +54,9 @@ print(numeroALto)
 print("=================================")
 
 #----- Punto 6 -----#
-def IMC (peso, estatura):
-    return peso/(estatura ** 2)
-calcularImc = IMC(52,1.65)
-print(calcularImc)
+peso = float(input("Por favor ingresa tu peso en Kg: "))
+estatura = float(input("Por favor ingresa tu estatura en m:"))
+print(calcularImc(peso,estatura))
 print("=================================")
 
 #----- Punto 7 -----#
