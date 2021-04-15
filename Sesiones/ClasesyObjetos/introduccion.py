@@ -47,16 +47,50 @@ class Humano ():
         return self.dinero
 
 
-humano1 = Humano('Levi',27,1.67)
-humano2 = Humano('Armin',27,1.73)
+class Ingeniero(Humano):
+    def __init__(self,nombreEntrada,edadEntrada,estaturaEntrada,areaEntrada):
+        Humano.__init__(self,nombreEntrada,edadEntrada,estaturaEntrada)
+        self.area = areaEntrada
 
-humano1.hablar("Esta haciendo un día lindo")
-humano2.hablar("Adiós amigo")
-print(humano1.nombre)
-print(humano2.nombre)
-print(humano2.edad)
-humano1.mostrarAtributos()
-humano1.recorrerDistancia(25)
-humano2.mostrarAtributos()
-totalAhorrado = humano2.ahorraDinero()
-humano2.mostrarAtributos()
+
+    def solucionarProblemas(self,problema):
+        print(f"Hola soy un ingeniero/a y me llamo {self.nombre} y procedo a solucionar el problema {problema}")
+
+class Programador(Humano):
+    def crearAlgoritmo(self,algoritmo):
+        print(f"Hola soy {self.nombre} y procedo a resolver el algoritmo {algoritmo}")
+
+class Biomedico(Ingeniero,Programador):
+    def mantenimientoEquiposMedicos(self,nombreEquipo):
+        print(f"Hola soy {self.nombre} y procedo a arreglar el {nombreEquipo}")
+
+class Abogado(Humano):
+    def levantarAccionDeTutela(self,nombreCliente):
+        print(f"Hola soy {self.nombre} y estoy representando a {nombreCliente}")
+
+# humano1 = Humano('Levi',27,1.67)
+# humano2 = Humano('Armin',27,1.73)
+
+# humano1.hablar("Esta haciendo un día lindo")
+# humano2.hablar("Adiós amigo")
+# print(humano1.nombre)
+# print(humano2.nombre)
+# print(humano2.edad)
+# humano1.mostrarAtributos()
+# humano1.recorrerDistancia(25)
+# humano2.mostrarAtributos()
+# totalAhorrado = humano2.ahorraDinero()
+# humano2.mostrarAtributos()
+
+# biomedico1 = Biomedico("Isabel",19,1.58,"Biomédicina")
+# biomedico1.recorrerDistancia(25)
+# biomedico1.mostrarAtributos()
+# biomedico1.mantenimientoEquiposMedicos("Electrocardiograma")
+
+# abogado1 = Abogado("Jason",37,1.79)
+# abogado1.mostrarAtributos
+# abogado1.levantarAccionDeTutela(biomedico1.nombre)
+
+# biomedico1.crearAlgoritmo("Fibonacci")
+# biomedico1.solucionarProblemas("Ocupación altas de UCIs")
+# print(biomedico1.area)
