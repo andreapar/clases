@@ -26,8 +26,8 @@ class Zorro:
 
     def mostrarAtributos (self):
         print(f'''Soy el zorro {self.nombre} y soy una/o {self.genero}.
-                Tengo el pelaje del color {self.pelaje} lo que me diferencia
-                de los demás y habito normalmente en {self.habitat}
+            Tengo el pelaje del color {self.pelaje} lo que me diferencia
+            de los demás y habito normalmente en {self.habitat}
         ''')
 
     def cazar (self):
