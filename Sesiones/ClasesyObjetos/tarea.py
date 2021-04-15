@@ -35,12 +35,17 @@ class Zorro:
 
 zorro1 = Zorro("vulpes vulpe", "rojo", "macho", "Hemisferio norte")
 zorro2 = Zorro("Vulpes lagopus", "blanco", "hembra", "Eurasia y Norteamérica")
-zorro3 = Zorro("Vulpes zerda","arena", "macho", "Desirto delSáhara")
+zorro3 = Zorro("Vulpes zerda","arena", "macho", " el Desierto del Sáhara")
 
 zorro1.mostrarAtributos()
-print("================================")
+zorro1.jugar()
+zorro1.cazar()
+print("========================================================================")
 zorro2.jugar()
+zorro2.cazar()
 zorro2.mostrarAtributos()
-print("================================")
+print("=========================================================================")
 zorro3.cazar()
+zorro3.mostrarAtributos()
+zorro3.jugar()
 
