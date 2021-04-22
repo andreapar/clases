@@ -12,14 +12,14 @@ class ElementoDigital ():
 
     def mostrarAtributos (self):
         print(f'''La aplicación es {self.nombre}, el creador del elemento digital es {self.creador}, 
-        un gran programador para su siglo que creó está el día {self.fecha} para ser la mejor aplicación educativa''')
+        un gran programador para su siglo que creó está aplicación el día {self.fecha} para ser la mejor ''')
 
 elemento1 = ElementoDigital("In Academia", "Camil Ackerman", "25/06/2021")
 elemento1.mostrarAtributos()
 print("========================================================================")
 
 class Pagina ():
-    '''En la clase Pagina puedes encoontrar diversos atributos que la hacen única y una de las mejores páginas de la web'''
+    '''En la clase Pagina puedes encontrar diversos atributos que la hacen única y una de las mejores páginas de la web'''
 
     def __init__(self, tipodecontenidoh, formatoh, fechah):
         self.tipo = tipodecontenidoh
@@ -48,7 +48,7 @@ class Usuario ():
         print(f'''Hola soy {self.nombre}, tengo {self.edad} años ,
         mi sexo es {self.sexo} y soy de {self.nacionalidad}''')
 
-usuario = Usuario ("Duvan",30,"hombre","Colombia")
+usuario = Usuario ("Duvan",30,"masculino","Colombia")
 usuario.mostrarA()
 print("========================================================================")
 
@@ -71,3 +71,39 @@ cancion = Cancion("History","1D","26/01/2016","Pop", 3.15)
 cancion.mostrarCancion()
 print("========================================================================")
 cancion.reproducir(6)
+print("========================================================================")
+
+class Artista (Usuario):
+    def __init__ (self,nombreEntrada,edadEntrada, sexoEntrada, nacionalidadEntrada,generoEntrada,cancionesPublicadasIn,albumEntrada):
+        Usuario.__init__ (self,nombreEntrada,edadEntrada, sexoEntrada, nacionalidadEntrada)
+        self.genero = generoEntrada
+        self.canciones = cancionesPublicadasIn
+        self.album = albumEntrada
+
+    def concierto (self,ciudad):
+        print(f"Hola soy {self.nombre} un artista reciente y daré un concierto en la noche en  {ciudad}")
+
+angel = Artista("Ángel",19,"masuculino","colombiano","Pop alternativo",30,7)
+angel.concierto("Medellín")
+print("========================================================================")
+
+class Favoritos(Pagina):
+    def __init__(self,tipodecontenidoh, formatoh, fechah,favcomui,fechaActualizacion):
+        Pagina.__init__ (self,tipodecontenidoh, formatoh, fechah)
+        self.favoritocomunidad = favcomui
+        self.fechaActualizacion = fechaActualizacion
+
+    def agrgarSong (self, cancion, actualizacion):
+        self.favoritocomunidad.append(cancion)
+        self.fechaActualizacion = actualizacion
+
+    def mostrarLista (self, cancionEliminida):
+        print(self.favoritocomunidad)
+        self.favoritocomunidad.pop(cancionEliminida)
+
+lista = ["History", "End of the day", "Infinity", "Angel", "Drag me down", "One thing"]
+oneDirection = Favoritos ("Cancion", "mp3", 2020, lista, 2021)
+oneDirection.mostrarLista(3)
+print("========================================================================")
+oneDirection.agrgarSong("Best song ever",2021)
+print(oneDirection.favoritocomunidad)
