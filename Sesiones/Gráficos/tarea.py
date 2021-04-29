@@ -9,3 +9,6 @@ plt.title("Sabor de helado favoritos")
 plt.xlabel("Helado")
 plt.ylabel("% de gusto")
 plt.show()
+
+plt.savefig("SaborHelados.png")
+plt.show ()
