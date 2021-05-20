@@ -1,0 +1,5 @@
+Archivo de datos de estudiantes
+nombre:Andrea edad: 18 estatura: 1.65
+nombre:Veronica edad: 18 estatura: 1.62
+nombre:Isabel edad: 20 estatura: 1.58
+nombre:Nicolle edad: 20 estatura: 1.58
