@@ -68,6 +68,8 @@ while(isCorrectInfo == False):
     if (isCorrectInfo == False):
         print("El párrafo debe termninar con punto")
 
+parrafo = parrafo[:-1]
+parrafo = parrafo.replace(",","")
 palabras = parrafo.split()
 palabraMayor = max(palabras,key=len)
 palabraMenor = min(palabras,key=len)
