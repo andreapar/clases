@@ -1,0 +1,10 @@
+Archivo para manejo de clientes
+
+Equipo: Electrocardiograma
+Descripción: Ayuda a registrar las señales eléctricas del corazón
+Precio mantenimiento: 500000
+======================
+Equipo: Nebulizador
+Descripción: Transforma medicamentos líquidos en vapor
+Precio mantenimiento: 200000
+======================
