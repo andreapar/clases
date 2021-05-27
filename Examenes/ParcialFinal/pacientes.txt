@@ -1,0 +1,10 @@
+Clientes consultorio de neurología
+
+Paciente: Andrea
+Descripción: Anemia, deficiencia de glóbulos rojos
+Precio mantenimiento: 23000
+=========================
+Paciente: Alejandra
+Descripción: Rinitis, afecta la mucosa nasal
+Precio mantenimiento: 12000
+=========================
